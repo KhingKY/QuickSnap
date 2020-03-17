@@ -101,6 +101,7 @@ namespace CardGames.GameLogic
 		{
 			if (_deck.CardsRemaining > 0)			// have cards...
 			{
+				SwinGame.PlaySoundEffect ("Slap");
 				_topCards [0] = _topCards [1];		// move top to card 2
 				_topCards [1] = _deck.Draw ();		// get a new top card
 				_topCards[1].TurnOver();			// reveal card
